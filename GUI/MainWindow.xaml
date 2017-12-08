@@ -5,8 +5,21 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:GUI"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
+        Title="Главное окно" Height="350" Width="300">
     <Grid>
-        
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="15">Домашняя библиотека</TextBlock>
+        <TextBlock Name="BooksQuantityTextBlock" Grid.Row="1"/>
+        <Button Name="ReadButton" Grid.Row="2">Просмотреть данные</Button>
+        <Button Name="AddButton" Grid.Row="3">Добавить новые данные</Button>
+        <Button Name="EditDeleteButton" Grid.Row="4">Редактировать и удалить данные</Button>
+        <Button Name="ExitButton" Grid.Row="5" VerticalAlignment="Center" HorizontalAlignment="Center" Height="35" Width="140" Click="ExitButton_Click">Выход</Button>
     </Grid>
 </Window>
