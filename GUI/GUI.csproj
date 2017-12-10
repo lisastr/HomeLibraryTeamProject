@@ -54,6 +54,38 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Page Include="EditDeleteWindows\EditDeleteAuthorsWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="EditDeleteWindows\EditDeleteBooksWindows\EditDeleteBooksAuthorsWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="EditDeleteWindows\EditDeleteBooksWindows\EditDeleteBooksQuantityDecreasedWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="EditDeleteWindows\EditDeleteBooksWindows\EditDeleteBooksQuantityIncreasedWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="EditDeleteWindows\EditDeleteBooksWindows\EditDeleteBooksStoragesWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="EditDeleteWindows\EditDeleteBooksWindows\EditDeleteBooksWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="EditDeleteWindows\EditDeleteStoragesWindows\EditDeleteStoragesExceptionWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="EditDeleteWindows\EditDeleteStoragesWindows\EditDeleteStoragesWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="FunctionWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -65,6 +97,30 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="EditDeleteWindows\EditDeleteAuthorsWindow.xaml.cs">
+      <DependentUpon>EditDeleteAuthorsWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="EditDeleteWindows\EditDeleteBooksWindows\EditDeleteBooksAuthorsWindow.xaml.cs">
+      <DependentUpon>EditDeleteBooksAuthorsWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="EditDeleteWindows\EditDeleteBooksWindows\EditDeleteBooksQuantityDecreasedWindow.xaml.cs">
+      <DependentUpon>EditDeleteBooksQuantityDecreasedWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="EditDeleteWindows\EditDeleteBooksWindows\EditDeleteBooksQuantityIncreasedWindow.xaml.cs">
+      <DependentUpon>EditDeleteBooksQuantityIncreasedWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="EditDeleteWindows\EditDeleteBooksWindows\EditDeleteBooksStoragesWindow.xaml.cs">
+      <DependentUpon>EditDeleteBooksStoragesWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="EditDeleteWindows\EditDeleteBooksWindows\EditDeleteBooksWindow.xaml.cs">
+      <DependentUpon>EditDeleteBooksWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="EditDeleteWindows\EditDeleteStoragesWindows\EditDeleteStoragesExceptionWindow.xaml.cs">
+      <DependentUpon>EditDeleteStoragesExceptionWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="EditDeleteWindows\EditDeleteStoragesWindows\EditDeleteStoragesWindow.xaml.cs">
+      <DependentUpon>EditDeleteStoragesWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="FunctionWindow.xaml.cs">
       <DependentUpon>FunctionWindow.xaml</DependentUpon>
@@ -102,7 +158,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="CreateWindows\" />
-    <Folder Include="EditDeleteWindows\" />
     <Folder Include="ReadWindows\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

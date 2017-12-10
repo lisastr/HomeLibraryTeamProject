@@ -11,6 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using GUI.EditDeleteWindows;
 
 namespace GUI
 {
@@ -21,7 +22,7 @@ namespace GUI
     {
         public Window BooksWindow { get; set; }
         public Window AuthorsWindow { get; set; }
-        public Window StoragePlacesWindow { get; set; }
+        public Window StoragesWindow { get; set; }
 
         public int FunctionIndicator { get; set; }
 
@@ -54,7 +55,7 @@ namespace GUI
                             //BooksWindow = new ...
                             break;
                         case 2:
-                            //BooksWindow = new ...
+                            BooksWindow = new EditDeleteBooksWindow();
                             break;
                     }
                     break;
@@ -73,7 +74,7 @@ namespace GUI
                             //AuthorsWindow = new ...
                             break;
                         case 2:
-                            //AuthorsWindow = new ...
+                            AuthorsWindow = new EditDeleteAuthorsWindow();
                             break;
                     }
                     break;
@@ -86,13 +87,13 @@ namespace GUI
                         //1 - create
                         //2 - edit & delete
                         case 0:
-                            //StoragePlacesWindow = new ...
+                            //StoragesWindow = new ...
                             break;
                         case 1:
-                            //StoragePlacesWindow = new ...
+                            //StoragesWindow = new ...
                             break;
                         case 2:
-                            //StoragePlacesWindow = new ...
+                            StoragesWindow = new EditDeleteStoragesWindow();
                             break;
                     }
                     break;

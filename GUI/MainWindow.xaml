@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:GUI"
         mc:Ignorable="d"
-        Title="Главное окно" Height="350" Width="300">
+        Title="Главное окно" MinHeight="350" Height="350" MinWidth="300" Width="300">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition/>
@@ -19,7 +19,7 @@
         <TextBlock Name="BooksQuantityTextBlock" Grid.Row="1"/>
         <Button Name="ReadButton" Tag="0" Grid.Row="2" Click="Button_Click">Просмотреть данные</Button>
         <Button Name="AddButton" Tag="1" Grid.Row="3" Click="Button_Click">Добавить новые данные</Button>
-        <Button Name="EditDeleteButton" Tag="2" Grid.Row="4" Click="Button_Click">Редактировать и удалить данные</Button>
+        <Button Name="EditDeleteButton" Tag="2" Grid.Row="4" Click="Button_Click">Редактировать или удалить данные</Button>
         <Button Name="ExitButton" Tag="3" Grid.Row="5" VerticalAlignment="Center" HorizontalAlignment="Center" Height="35" Width="140" Click="Button_Click">Выход</Button>
     </Grid>
 </Window>

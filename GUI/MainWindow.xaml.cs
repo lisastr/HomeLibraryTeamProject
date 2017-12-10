@@ -45,7 +45,7 @@ namespace GUI
                     CreateWindow.Show();
                     break;
                 case 2:
-                    EditDeleteWindow = new FunctionWindow(tagInt, "Редактировать и удалить данные:");
+                    EditDeleteWindow = new FunctionWindow(tagInt, "Редактировать или удалить данные:");
                     EditDeleteWindow.Show();
                     break;
                 case 3:

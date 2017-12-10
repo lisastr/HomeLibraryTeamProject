@@ -1,0 +1,73 @@
+﻿<Window x:Class="GUI.EditDeleteWindows.EditDeleteStoragesWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:GUI.EditDeleteWindows"
+        mc:Ignorable="d"
+        Title="Окно: редактировать или удалить места хранения" MinHeight="400" Height="400" MinWidth="500" Width="500">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition/>
+            <RowDefinition Height="auto"/>
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="2">
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <DataGrid Grid.RowSpan="5"/>
+            <Grid Grid.Column="1">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center">Характеристика*:</TextBlock>
+                <TextBox Grid.Column="1"/>
+            </Grid>
+            <TextBlock Grid.Row="1" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center">* - обязательно</TextBlock>
+            <Button Grid.Row="2" Grid.Column="1">Сохранить изменения</Button>
+            <Button Grid.Row="3" Grid.Column="1">Показать связанные области хранения</Button>
+            <Button Grid.Row="4" Grid.Column="1">Удалить выбранный элемент мебели</Button>
+        </Grid>
+        <Grid Grid.Row="4">
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <DataGrid Grid.RowSpan="4"/>
+            <Grid Grid.Column="1">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center">Характеристика*:</TextBlock>
+                <TextBox Grid.Column="1"/>
+            </Grid>
+            <TextBlock Grid.Row="1" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center">* - обязательно</TextBlock>
+            <Button Grid.Row="2" Grid.Column="1">Сохранить изменения</Button>
+            <Button Grid.Row="3" Grid.Column="1">Удалить выбранный элемент мебели</Button>
+        </Grid>
+        <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="15" Height="25">Редактировать или удалить места хранения:</TextBlock>
+        <TextBlock Grid.Row="1" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="14" Height="22">Элементы мебели:</TextBlock>
+        <TextBlock Grid.Row="3" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="14" Height="22">Области хранения в элементах мебели:</TextBlock>
+        <Button Grid.Row="5" VerticalAlignment="Center" HorizontalAlignment="Center" Width="140" Height="30">Назад</Button>
+    </Grid>
+</Window>
