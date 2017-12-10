@@ -17,9 +17,9 @@
         </Grid.RowDefinitions>
         <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="15">Домашняя библиотека</TextBlock>
         <TextBlock Name="BooksQuantityTextBlock" Grid.Row="1"/>
-        <Button Name="ReadButton" Grid.Row="2">Просмотреть данные</Button>
-        <Button Name="AddButton" Grid.Row="3">Добавить новые данные</Button>
-        <Button Name="EditDeleteButton" Grid.Row="4">Редактировать и удалить данные</Button>
-        <Button Name="ExitButton" Grid.Row="5" VerticalAlignment="Center" HorizontalAlignment="Center" Height="35" Width="140" Click="ExitButton_Click">Выход</Button>
+        <Button Name="ReadButton" Tag="0" Grid.Row="2" Click="Button_Click">Просмотреть данные</Button>
+        <Button Name="AddButton" Tag="1" Grid.Row="3" Click="Button_Click">Добавить новые данные</Button>
+        <Button Name="EditDeleteButton" Tag="2" Grid.Row="4" Click="Button_Click">Редактировать и удалить данные</Button>
+        <Button Name="ExitButton" Tag="3" Grid.Row="5" VerticalAlignment="Center" HorizontalAlignment="Center" Height="35" Width="140" Click="Button_Click">Выход</Button>
     </Grid>
 </Window>
