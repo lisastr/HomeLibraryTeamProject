@@ -5,8 +5,41 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:GUI.EditDeleteWindows"
         mc:Ignorable="d"
-        Title="EditDeleteBooksStoragesWindow" Height="300" Width="300">
+        Title="Окно: Редактировать или удалить места хранения выбранной книги" MinHeight="600" Height="600" MinWidth="600" Width="600">
     <Grid>
-        
+        <Grid.RowDefinitions>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="30"/>
+            <RowDefinition/>
+            <RowDefinition Height="30"/>
+            <RowDefinition/>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="40"/>
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="4">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="30"/>
+                <RowDefinition/>
+                <RowDefinition Height="40"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center">Элементы мебели:</TextBlock>
+            <TextBlock Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center">Области хранения выбранного элемента мебели:</TextBlock>
+            <DataGrid Grid.Row="1" Grid.Column="1"/>
+            <DataGrid Grid.Row="1"/>
+            <Button Grid.Row="2">Выбрать элемент мебели</Button>
+            <Button Grid.Row="2" Grid.Column="1">Выбрать область хранения</Button>
+        </Grid>
+        <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="15" Height="25">Редактировать или удалить авторов выбранной книги:</TextBlock>
+        <TextBlock Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center">Места хранения выбранной книги в настоящий момент:</TextBlock>
+        <DataGrid Grid.Row="2"/>
+        <TextBlock Grid.Row="3" HorizontalAlignment="Center" VerticalAlignment="Center">Заменить выбранное место хранения на:</TextBlock>
+        <TextBlock Grid.Row="5" HorizontalAlignment="Center" VerticalAlignment="Center">Если место хранения отсутствует в базе данных, добавьте его:</TextBlock>
+        <Button Grid.Row="6" VerticalAlignment="Center" HorizontalAlignment="Center" Width="170" Height="30">Добавить место хранения</Button>
+        <Button Name="BackButton" Grid.Row="7" VerticalAlignment="Center" HorizontalAlignment="Center" Width="140" Height="30">Назад</Button>
     </Grid>
 </Window>

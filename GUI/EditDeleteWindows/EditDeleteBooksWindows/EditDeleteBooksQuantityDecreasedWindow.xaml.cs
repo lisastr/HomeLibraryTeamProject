@@ -23,5 +23,15 @@ namespace GUI.EditDeleteWindows
         {
             InitializeComponent();
         }
+
+        private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+            e.Cancel = true;
+            MessageBoxResult result = MessageBox.Show(
+                "Необходимо удалить лишние экземпляры книги прежде чем закрыть окно.",
+                "Сообщение",
+                MessageBoxButton.OK,
+                MessageBoxImage.Information);
+        }
     }
 }

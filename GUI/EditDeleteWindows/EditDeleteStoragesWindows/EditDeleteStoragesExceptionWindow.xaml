@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:GUI.EditDeleteWindows"
         mc:Ignorable="d"
-        Title="Окно: Присвойте места хранения взамен удаленных"  MinHeight="600" Height="600" MinWidth="550" Width="550"
+        Title="Окно: Присвойте места хранения взамен удаленных"  MinHeight="600" Height="600" MinWidth="600" Width="600"
         Closing="Window_Closing">
     <Grid>
         <Grid.RowDefinitions>
@@ -15,6 +15,7 @@
         </Grid.RowDefinitions>
         <Grid Grid.Row="3">
             <Grid.RowDefinitions>
+                <RowDefinition Height="30"/>
                 <RowDefinition Height="30"/>
                 <RowDefinition/>
                 <RowDefinition Height="30"/>
@@ -26,12 +27,14 @@
                 <ColumnDefinition/>
             </Grid.ColumnDefinitions>
             <TextBlock Grid.ColumnSpan="2" HorizontalAlignment="Center" VerticalAlignment="Center">Присвойте выбранной книге еще N мест хранения:</TextBlock>
-            <DataGrid Grid.Row="1"/>
-            <DataGrid Grid.Row="1" Grid.Column="1"/>
-            <Button Grid.Row="2">Выбрать элемент мебели</Button>
-            <Button Grid.Row="2" Grid.Column="1">Выбрать область хранения</Button>
-            <TextBlock Grid.Row="3" Grid.ColumnSpan="2" HorizontalAlignment="Center" VerticalAlignment="Center">Если место хранения отсутствует в базе данных, добавьте его:</TextBlock>
-            <Button Grid.Row="4" Grid.ColumnSpan="2" VerticalAlignment="Center" HorizontalAlignment="Center" Width="155" Height="25">Добавить место хранения</Button>
+            <TextBlock Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center">Элементы мебели:</TextBlock>
+            <TextBlock Grid.Row="1" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center">Области хранения выбранного элемента мебели:</TextBlock>
+            <DataGrid Grid.Row="2"/>
+            <DataGrid Grid.Row="2" Grid.Column="1"/>
+            <Button Grid.Row="3">Выбрать элемент мебели</Button>
+            <Button Grid.Row="3" Grid.Column="1">Выбрать область хранения</Button>
+            <TextBlock Grid.Row="4" Grid.ColumnSpan="2" HorizontalAlignment="Center" VerticalAlignment="Center">Если место хранения отсутствует в базе данных, добавьте его:</TextBlock>
+            <Button Grid.Row="5" Grid.ColumnSpan="2" VerticalAlignment="Center" HorizontalAlignment="Center" Width="155" Height="25">Добавить место хранения</Button>
         </Grid>
         <Grid Grid.Row="1">
             <Grid.RowDefinitions>

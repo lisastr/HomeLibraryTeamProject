@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:GUI.EditDeleteWindows"
         mc:Ignorable="d"
-        Title="EditDeleteBooksAuthorsWindow" Height="700" Width="700">
+        Title="Окно: Редактировать или удалить авторов выбранной книги" MinHeight="700" Height="700" MinWidth="700" Width="700">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="30"/>
@@ -73,7 +73,7 @@
             <DataGrid Grid.Row="2"></DataGrid>
             <Button Grid.Row="3" VerticalAlignment="Center" HorizontalAlignment="Center" Width="140" Height="30">Выбрать</Button>
             <TextBlock Grid.Row="4" HorizontalAlignment="Center" VerticalAlignment="Center">Если автор отсутствует в базе данных, добавьте его:</TextBlock>
-            <Button Grid.Row="5" VerticalAlignment="Center" HorizontalAlignment="Center" Width="140" Height="30">Добавить</Button>
+            <Button Grid.Row="5" VerticalAlignment="Center" HorizontalAlignment="Center" Width="140" Height="30">Добавить автора</Button>
         </Grid>
     </Grid>
 </Window>
