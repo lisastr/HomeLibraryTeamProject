@@ -8,9 +8,9 @@
         Title="Окно: редактировать или удалить авторов" MinHeight="400" Height="400" MinWidth="500" Width="500">
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="auto"/>
+            <RowDefinition Height="30"/>
             <RowDefinition/>
-            <RowDefinition Height="auto"/>
+            <RowDefinition Height="40"/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
@@ -46,7 +46,7 @@
                 <RowDefinition/>
                 <RowDefinition Height="auto"/>
                 <RowDefinition Height="auto"/>
-                <RowDefinition Height="auto"/>
+                <RowDefinition Height="30"/>
             </Grid.RowDefinitions>
             <Grid.ColumnDefinitions>
                 <ColumnDefinition/>

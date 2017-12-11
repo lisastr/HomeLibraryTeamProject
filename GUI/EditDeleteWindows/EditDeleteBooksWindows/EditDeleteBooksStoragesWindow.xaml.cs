@@ -22,7 +22,6 @@ namespace GUI.EditDeleteWindows
         public EditDeleteBooksStoragesWindow()
         {
             InitializeComponent();
-            Show();
         }
     }
 }

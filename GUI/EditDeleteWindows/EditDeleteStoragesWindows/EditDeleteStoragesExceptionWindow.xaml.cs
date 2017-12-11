@@ -22,7 +22,16 @@ namespace GUI.EditDeleteWindows
         public EditDeleteStoragesExceptionWindow()
         {
             InitializeComponent();
-            Show();
+        }
+
+        private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+            e.Cancel = true;
+            MessageBoxResult result = MessageBox.Show(
+                "Необходимо присвоить недостающие места хранения прежде чем закрыть окно.",
+                "Сообщение",
+                MessageBoxButton.OK,
+                MessageBoxImage.Information);
         }
     }
 }

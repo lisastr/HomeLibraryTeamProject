@@ -5,8 +5,75 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:GUI.EditDeleteWindows"
         mc:Ignorable="d"
-        Title="EditDeleteBooksAuthorsWindow" Height="300" Width="300">
+        Title="EditDeleteBooksAuthorsWindow" Height="700" Width="700">
     <Grid>
-        
+        <Grid.RowDefinitions>
+            <RowDefinition Height="30"/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition Height="40"/>
+        </Grid.RowDefinitions>
+        <TextBlock Grid.ColumnSpan="2" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="15" Height="25">Редактировать или удалить авторов выбранной книги:</TextBlock>
+        <Button Name="BackButton" Grid.Row="3" Grid.ColumnSpan="2" VerticalAlignment="Center" HorizontalAlignment="Center" Width="140" Height="30">Назад</Button>
+        <Grid Grid.Row="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="20"/>
+                <RowDefinition/>
+                <RowDefinition Height="20"/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Grid Grid.Row="3">
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center">Имя*:</TextBlock>
+                <TextBlock Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center">Фамилия*:</TextBlock>
+                <TextBlock Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Center">Отчество:</TextBlock>
+                <TextBlock Grid.Row="3" Grid.ColumnSpan="2" HorizontalAlignment="Center" VerticalAlignment="Center">* - обязательно</TextBlock>
+                <TextBox Grid.Column="1"/>
+                <TextBox Grid.Row="1" Grid.Column="1"/>
+                <TextBox Grid.Row="2" Grid.Column="1"/>
+            </Grid>
+            <Grid Grid.Row="3" Grid.Column="1">
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <Button>Сохранить изменения в свойствах выбранного автора</Button>
+                <TextBlock Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="10">Note: внесенные изменения коснутся автора как отдельной сущности.</TextBlock>
+                <Button Grid.Row="2">Удалить связь с выбранным автором</Button>
+            </Grid>
+            <TextBlock Grid.ColumnSpan="2" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="13" FontWeight="Bold">Авторы книги в настоящий момент:</TextBlock>
+            <DataGrid Grid.Row="1" Grid.ColumnSpan="2"></DataGrid>
+            <TextBlock Grid.Row="2" Grid.ColumnSpan="2" HorizontalAlignment="Center" VerticalAlignment="Center">Выбранный автор:</TextBlock>
+        </Grid>
+        <Grid Grid.Row="2">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="30"/>
+                <RowDefinition Height="30"/>
+                <RowDefinition/>
+                <RowDefinition Height="40"/>
+                <RowDefinition Height="30"/>
+                <RowDefinition Height="40"/>
+            </Grid.RowDefinitions>
+            <TextBlock Grid.ColumnSpan="2" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="13" FontWeight="Bold">Добавить автора книги:</TextBlock>
+            <TextBlock Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center">Выбрать автора среди существующих:</TextBlock>
+            <DataGrid Grid.Row="2"></DataGrid>
+            <Button Grid.Row="3" VerticalAlignment="Center" HorizontalAlignment="Center" Width="140" Height="30">Выбрать</Button>
+            <TextBlock Grid.Row="4" HorizontalAlignment="Center" VerticalAlignment="Center">Если автор отсутствует в базе данных, добавьте его:</TextBlock>
+            <Button Grid.Row="5" VerticalAlignment="Center" HorizontalAlignment="Center" Width="140" Height="30">Добавить</Button>
+        </Grid>
     </Grid>
 </Window>

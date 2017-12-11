@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:GUI.EditDeleteWindows"
         mc:Ignorable="d"
-        Title="Окно: редактировать или удалить места хранения" MinHeight="400" Height="400" MinWidth="500" Width="500">
+        Title="Окно: редактировать или удалить места хранения" MinHeight="450" Height="450" MinWidth="650" Width="650">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="auto"/>
@@ -13,10 +13,11 @@
             <RowDefinition/>
             <RowDefinition Height="auto"/>
             <RowDefinition/>
-            <RowDefinition Height="auto"/>
+            <RowDefinition Height="40"/>
         </Grid.RowDefinitions>
         <Grid Grid.Row="2">
             <Grid.RowDefinitions>
+                <RowDefinition/>
                 <RowDefinition/>
                 <RowDefinition/>
                 <RowDefinition/>
@@ -27,7 +28,7 @@
                 <ColumnDefinition/>
                 <ColumnDefinition/>
             </Grid.ColumnDefinitions>
-            <DataGrid Grid.RowSpan="5"/>
+            <DataGrid Grid.RowSpan="6"/>
             <Grid Grid.Column="1">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition/>
@@ -39,7 +40,8 @@
             <TextBlock Grid.Row="1" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center">* - обязательно</TextBlock>
             <Button Grid.Row="2" Grid.Column="1">Сохранить изменения</Button>
             <Button Grid.Row="3" Grid.Column="1">Показать связанные области хранения</Button>
-            <Button Grid.Row="4" Grid.Column="1">Удалить выбранный элемент мебели</Button>
+            <Button Grid.Row="4" Grid.Column="1" Click="DemoButton_Click">Удалить выбранный элемент мебели</Button>
+            <TextBlock Grid.Row="5" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center">Note: будут удалены все связанные области хранения.</TextBlock>
         </Grid>
         <Grid Grid.Row="4">
             <Grid.RowDefinitions>
@@ -63,7 +65,7 @@
             </Grid>
             <TextBlock Grid.Row="1" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center">* - обязательно</TextBlock>
             <Button Grid.Row="2" Grid.Column="1">Сохранить изменения</Button>
-            <Button Grid.Row="3" Grid.Column="1">Удалить выбранный элемент мебели</Button>
+            <Button Grid.Row="3" Grid.Column="1" Click="DemoButton_Click">Удалить выбранную область хранения</Button>
         </Grid>
         <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="15" Height="25">Редактировать или удалить места хранения:</TextBlock>
         <TextBlock Grid.Row="1" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="14" Height="22">Элементы мебели:</TextBlock>

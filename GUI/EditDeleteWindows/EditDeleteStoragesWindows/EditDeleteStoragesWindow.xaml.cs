@@ -19,10 +19,16 @@ namespace GUI.EditDeleteWindows
     /// </summary>
     public partial class EditDeleteStoragesWindow : Window
     {
+        EditDeleteStoragesExceptionWindow TheEditDeleteStoragesExceptionWindow;
         public EditDeleteStoragesWindow()
         {
             InitializeComponent();
-            Show();
+        }
+
+        private void DemoButton_Click(object sender, RoutedEventArgs e)
+        {
+            TheEditDeleteStoragesExceptionWindow = new EditDeleteStoragesExceptionWindow();
+            TheEditDeleteStoragesExceptionWindow.Show();
         }
     }
 }

@@ -1,0 +1,53 @@
+﻿Таблица с сортировкой: (DataGrid, выбор по какому столбцу сортировать, как сортировать: по возрастанию/убыванию, кнопка "Сортировать")
+<Grid Grid.Row="1">
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="35"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <DataGrid Grid.ColumnSpan="2"/>
+            <TextBlock Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center">Сортировать по</TextBlock>
+            <TextBlock Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Center">В порядке</TextBlock>
+            <ComboBox Grid.Row="1" Grid.Column="1"/>
+            <ComboBox Grid.Row="2" Grid.Column="1"/>
+            <Button Grid.Row="3" Grid.ColumnSpan="2" VerticalAlignment="Center" HorizontalAlignment="Center" Width="80" Height="25">Сортировать</Button>
+        </Grid>
+
+		Шаблон окна: (Заголовок, кнопка "Назад", области для остальных элементов окна)
+		<Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="30"/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition Height="40"/>
+        </Grid.RowDefinitions>
+        <TextBlock Grid.ColumnSpan="2" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="15" Height="25">Редактировать или удалить авторов выбранной книги:</TextBlock>
+        <Button Name="BackButton" Grid.Row="3" Grid.ColumnSpan="2" VerticalAlignment="Center" HorizontalAlignment="Center" Width="140" Height="30">Назад</Button>
+    </Grid>
+
+	Шаблон - выбор места хранения для определенной книги:
+	<Grid Grid.Row="3">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="30"/>
+                <RowDefinition/>
+                <RowDefinition Height="30"/>
+                <RowDefinition Height="30"/>
+                <RowDefinition Height="40"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <TextBlock Grid.ColumnSpan="2" HorizontalAlignment="Center" VerticalAlignment="Center">Выберите место хранения:</TextBlock>
+            <DataGrid Grid.Row="1"/>
+            <DataGrid Grid.Row="1" Grid.Column="1"/>
+            <Button Grid.Row="2">Выбрать элемент мебели</Button>
+            <Button Grid.Row="2" Grid.Column="1">Выбрать область хранения</Button>
+            <TextBlock Grid.Row="3" Grid.ColumnSpan="2" HorizontalAlignment="Center" VerticalAlignment="Center">Если место хранения отсутствует в базе данных, добавьте его:</TextBlock>
+            <Button Grid.Row="4" Grid.ColumnSpan="2" VerticalAlignment="Center" HorizontalAlignment="Center" Width="155" Height="25">Добавить место хранения</Button>
+        </Grid>

@@ -56,6 +56,7 @@ namespace GUI
                             break;
                         case 2:
                             BooksWindow = new EditDeleteBooksWindow();
+                            BooksWindow.Show();
                             break;
                     }
                     break;
@@ -75,6 +76,7 @@ namespace GUI
                             break;
                         case 2:
                             AuthorsWindow = new EditDeleteAuthorsWindow();
+                            AuthorsWindow.Show();
                             break;
                     }
                     break;
@@ -94,6 +96,7 @@ namespace GUI
                             break;
                         case 2:
                             StoragesWindow = new EditDeleteStoragesWindow();
+                            StoragesWindow.Show();
                             break;
                     }
                     break;

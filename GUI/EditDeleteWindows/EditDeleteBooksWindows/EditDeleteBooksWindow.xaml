@@ -5,8 +5,84 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:GUI.EditDeleteWindows"
         mc:Ignorable="d"
-        Title="EditDeleteBooksWindow" Height="300" Width="300">
+        Title="Окно: Редактировать или удалить книги" MinHeight="500" Height="500" MinWidth="750" Width="750">
     <Grid>
-        
+        <Grid.RowDefinitions>
+            <RowDefinition Height="30"/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition Height="40"/>
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="1">
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="35"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <DataGrid Grid.ColumnSpan="2"/>
+            <TextBlock Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center">Сортировать по</TextBlock>
+            <TextBlock Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Center">В порядке</TextBlock>
+            <ComboBox Grid.Row="1" Grid.Column="1"/>
+            <ComboBox Grid.Row="2" Grid.Column="1"/>
+            <Button Grid.Row="3" Grid.ColumnSpan="2" VerticalAlignment="Center" HorizontalAlignment="Center" Width="80" Height="25">Сортировать</Button>
+        </Grid>
+        <Grid Grid.Row="2">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="25"/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <TextBlock Grid.ColumnSpan="2" HorizontalAlignment="Center" VerticalAlignment="Center">Выбранная книга:</TextBlock>
+            <Grid Grid.Row="1">
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center">Название*:</TextBlock>
+                <TextBlock Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center">Год выпуска:</TextBlock>
+                <TextBlock Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Center">ISBN:</TextBlock>
+                <TextBlock Grid.Row="3" HorizontalAlignment="Center" VerticalAlignment="Center">Язык:</TextBlock>
+                <TextBlock Grid.Row="4" HorizontalAlignment="Center" VerticalAlignment="Center">Количество*:</TextBlock>
+                <TextBlock Grid.Row="5" HorizontalAlignment="Center" VerticalAlignment="Center">Избранное?*</TextBlock>
+                <TextBlock Grid.Row="6" Grid.ColumnSpan="2" HorizontalAlignment="Center" VerticalAlignment="Center">* -обязательно</TextBlock>
+                <TextBox Grid.Column="1"/>
+                <TextBox Grid.Row="1" Grid.Column="1"/>
+                <TextBox Grid.Row="2" Grid.Column="1"/>
+                <TextBox Grid.Row="3" Grid.Column="1"/>
+                <TextBox Grid.Row="4" Grid.Column="1"/>
+                <ComboBox Grid.Row="5" Grid.Column="1"/>
+            </Grid>
+            <Grid Grid.Row="1" Grid.Column="1">
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <Button>Сохранить изменения в свойствах слева</Button>
+                <Button Grid.Row="1">Удалить выбранную книгу</Button>
+                <Button Grid.Row="2">Редактировать или удалить авторов выбранной книги</Button>
+                <Button Grid.Row="3">Редактировать или удалить места хранения выбранной книги</Button>
+            </Grid>
+        </Grid>
+        <TextBlock Grid.ColumnSpan="2" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="15" Height="25">Редактировать или удалить книги:</TextBlock>
+        <Button Grid.Row="3" Grid.ColumnSpan="2" VerticalAlignment="Center" HorizontalAlignment="Center" Width="140" Height="30">Назад</Button>
     </Grid>
 </Window>
