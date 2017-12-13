@@ -37,29 +37,26 @@ namespace GUI.EditDeleteWindows
             switch (tagInt)
             {
                 case 0:
-                    //Нажата кнопка "Сортировать книги"
-                    break;
-                case 1:
                     //Нажата кнопка "Сохранить изменения в свойствах книги"
                     QuantityIncreasedWindow = new EditDeleteBooksQuantityIncreasedWindow();
                     QuantityIncreasedWindow.Show();
                     QuantityDecreasedWindow = new EditDeleteBooksQuantityDecreasedWindow();
                     QuantityDecreasedWindow.Show();
                     break;
-                case 2:
+                case 1:
                     //Нажата кнопка "Удалить выбранную книгу"
                     break;
-                case 3:
+                case 2:
                     //Нажата кнопка "Редактировать или удалить авторов выбранной книги"
                     EDAuthorsWindow = new EditDeleteBooksAuthorsWindow();
                     EDAuthorsWindow.Show();
                     break;
-                case 4:
+                case 3:
                     //Нажата кнопка "Редактировать или удалить места хранения выбранной книги"
                     EDStoragesWindow = new EditDeleteBooksStoragesWindow();
                     EDStoragesWindow.Show();
                     break;
-                case 5:
+                case 4:
                     //Нажата кнопка "Назад"
                     Close();
                     break;

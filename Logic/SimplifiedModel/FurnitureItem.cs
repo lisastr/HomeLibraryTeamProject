@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Logic.SimplifiedModel
 {
-    class FurnitureItem
+    public class FurnitureItem
     {
         public int FurnitureItemID { get; set; }
         

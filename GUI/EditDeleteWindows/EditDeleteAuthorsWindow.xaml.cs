@@ -19,9 +19,16 @@ namespace GUI.EditDeleteWindows
     /// </summary>
     public partial class EditDeleteAuthorsWindow : Window
     {
+        List<Logic.SimplifiedModel.Author> DemoList = new List<Logic.SimplifiedModel.Author>()
+        {
+            new Logic.SimplifiedModel.Author() { AuthorID=0, Name="A", Surname="AA", Patronymic="AAA"},
+            new Logic.SimplifiedModel.Author() { AuthorID=1, Name="B", Surname="BB", Patronymic="BBB"},
+            new Logic.SimplifiedModel.Author() { AuthorID=2, Name="C", Surname="CC", Patronymic="CCC"}
+        };
         public EditDeleteAuthorsWindow()
         {
             InitializeComponent();
+            AuthorsDataGrid.ItemsSource = DemoList;
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
@@ -38,9 +45,6 @@ namespace GUI.EditDeleteWindows
                     //Нажата кнопка "Удалить выбранного автора"
                     break;
                 case 2:
-                    //Нажата кнопка "Сортировать"
-                    break;
-                case 3:
                     //Нажата кнопка "Назад"
                     Close();
                     break;

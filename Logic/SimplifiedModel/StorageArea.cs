@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Logic.SimplifiedModel
 {
-    class StorageArea
+    public class StorageArea
     {
         public int StorageAreaID { get; set; }
         

@@ -163,5 +163,11 @@
   <ItemGroup>
     <Resource Include="XAML - Шаблоны.txt" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Logic\Logic.csproj">
+      <Project>{07F3F90F-1E25-4F34-92BF-DF137DEED5B5}</Project>
+      <Name>Logic</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

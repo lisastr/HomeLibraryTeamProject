@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Logic.Model
 {
-    class Book
+    public class Book
     {
         public int BookID { get; set; }
 

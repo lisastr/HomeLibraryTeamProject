@@ -42,15 +42,12 @@ namespace GUI.EditDeleteWindows
             switch (tagInt)
             {
                 case 0:
-                    //Нажата кнопка "Сортировать"
-                    break;
-                case 1:
                     //Нажата кнопка "Выбрать элемент мебели"
                     break;
-                case 2:
+                case 1:
                     //Нажата кнопка "Выбрать область хранения"
                     break;
-                case 3:
+                case 2:
                     //Нажата кнопка "Добавить место хранения"
                     break;
             }
