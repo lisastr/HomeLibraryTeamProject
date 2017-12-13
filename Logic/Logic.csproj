@@ -52,6 +52,11 @@
     <Compile Include="Model\FurnitureItem.cs" />
     <Compile Include="Model\StorageArea.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SimplifiedContext.cs" />
+    <Compile Include="SimplifiedModel\Author.cs" />
+    <Compile Include="SimplifiedModel\Book.cs" />
+    <Compile Include="SimplifiedModel\FurnitureItem.cs" />
+    <Compile Include="SimplifiedModel\StorageArea.cs" />
     <Compile Include="TheContext.cs" />
   </ItemGroup>
   <ItemGroup />
