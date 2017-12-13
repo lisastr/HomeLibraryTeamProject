@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:GUI.EditDeleteWindows"
         mc:Ignorable="d"
-        Title="Окно: Добавить места хранения новых экзампляров книги" MinHeight="400" Height="400" MinWidth="600" Width="600"
+        Title="Окно: Добавить места хранения новых экзампляров книги" MinHeight="400" Height="400" MinWidth="750" Width="750"
         Closing="Window_Closing">
     <Grid Grid.Row="3">
         <Grid.RowDefinitions>
@@ -25,9 +25,9 @@
         <TextBlock Grid.Row="1" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center">Области хранения выбранного элемента мебели:</TextBlock>
         <DataGrid Grid.Row="2"/>
         <DataGrid Grid.Row="2" Grid.Column="1"/>
-        <Button Grid.Row="3">Выбрать элемент мебели</Button>
-        <Button Grid.Row="3" Grid.Column="1">Выбрать область хранения</Button>
+        <Button Name="ChooseFIButton" Tag="0" Grid.Row="3" Click="Button_Click">Показать области хранения выбранного элемента мебели</Button>
+        <Button Name="ChooseSAButton" Tag="1" Grid.Row="3" Grid.Column="1" Click="Button_Click">Добавить выбранную область хранения</Button>
         <TextBlock Grid.Row="4" Grid.ColumnSpan="2" HorizontalAlignment="Center" VerticalAlignment="Center">Если место хранения отсутствует в базе данных, добавьте его:</TextBlock>
-        <Button Grid.Row="5" Grid.ColumnSpan="2" VerticalAlignment="Center" HorizontalAlignment="Center" Width="155" Height="25">Добавить место хранения</Button>
+        <Button Name="AddStorageToDBButton" Tag="2" Grid.Row="5" Grid.ColumnSpan="2" VerticalAlignment="Center" HorizontalAlignment="Center" Width="155" Height="25" Click="Button_Click">Добавить место хранения</Button>
     </Grid>
 </Window>

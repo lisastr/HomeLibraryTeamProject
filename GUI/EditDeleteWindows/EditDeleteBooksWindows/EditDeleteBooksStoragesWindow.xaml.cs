@@ -23,5 +23,29 @@ namespace GUI.EditDeleteWindows
         {
             InitializeComponent();
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+
+            var button = sender as Button;
+            var tag = button.Tag as string;
+            var tagInt = Convert.ToInt32(tag);
+            switch (tagInt)
+            {
+                case 0:
+                    //Нажата кнопка "Выбрать элемент мебели"
+                    break;
+                case 1:
+                    //Нажата кнопка "Выбрать область хранения"
+                    break;
+                case 2:
+                    //Нажата кнопка "Добавить место хранения в базу данных"
+                    break;
+                case 3:
+                    //Нажата кнопка "Назад"
+                    Close();
+                    break;
+            }
+        }
     }
 }

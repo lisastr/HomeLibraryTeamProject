@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:GUI.EditDeleteWindows"
         mc:Ignorable="d"
-        Title="Окно: Удалить лишние места хранения книги" MinHeight="300" Height="300" MinWidth="500" Width="500"
+        Title="Окно: Удалить лишние места хранения книги" MinHeight="300" Height="300" MinWidth="600" Width="600"
         Closing="Window_Closing">
     <Grid>
         <Grid.RowDefinitions>
@@ -13,8 +13,8 @@
             <RowDefinition/>
             <RowDefinition Height="40"/>
         </Grid.RowDefinitions>
-        <TextBlock Name="TitleTextBox" HorizontalAlignment="Center" VerticalAlignment="Center">Количество экземпляров книги уменьшилось, удалите N мест хранения книги:</TextBlock>
+        <TextBlock Name="TitleTextBox" HorizontalAlignment="Center" VerticalAlignment="Center">Количество экземпляров книги уменьшилось, удалите N связей с местами хранения книги:</TextBlock>
         <DataGrid Grid.Row="1"/>
-        <Button Grid.Row="2" VerticalAlignment="Center" HorizontalAlignment="Center" Width="230" Height="30">Удалить выбранное место хранения</Button>
+        <Button Name="DeleteConnectionToStorageButton" Grid.Row="2" VerticalAlignment="Center" HorizontalAlignment="Center" Width="280" Height="30" Click="DeleteConnectionToStorageButton_Click">Удалить связь с выбранным местом хранения</Button>
     </Grid>
 </Window>

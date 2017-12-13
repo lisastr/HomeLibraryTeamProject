@@ -33,5 +33,10 @@ namespace GUI.EditDeleteWindows
                 MessageBoxButton.OK,
                 MessageBoxImage.Information);
         }
+
+        private void DeleteConnectionToStorageButton_Click(object sender, RoutedEventArgs e)
+        {
+            //Нажата кнопка "Удалить связь с выбранным местом хранения"
+        }
     }
 }

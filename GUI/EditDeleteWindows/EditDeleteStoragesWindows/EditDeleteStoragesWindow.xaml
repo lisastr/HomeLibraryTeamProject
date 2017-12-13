@@ -38,9 +38,9 @@
                 <TextBox Grid.Column="1"/>
             </Grid>
             <TextBlock Grid.Row="1" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center">* - обязательно</TextBlock>
-            <Button Grid.Row="2" Grid.Column="1">Сохранить изменения</Button>
-            <Button Grid.Row="3" Grid.Column="1">Показать связанные области хранения</Button>
-            <Button Grid.Row="4" Grid.Column="1" Click="DemoButton_Click">Удалить выбранный элемент мебели</Button>
+            <Button Name="SaveFIChangesButton" Tag="0" Grid.Row="2" Grid.Column="1" Click="Button_Click">Сохранить изменения элемента мебели</Button>
+            <Button Name="ShowConnectedSAButton" Tag="1" Grid.Row="3" Grid.Column="1" Click="Button_Click">Показать связанные области хранения</Button>
+            <Button Name="DeleteFIButton" Tag="2" Grid.Row="4" Grid.Column="1"  Click="Button_Click">Удалить выбранный элемент мебели</Button>
             <TextBlock Grid.Row="5" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center">Note: будут удалены все связанные области хранения.</TextBlock>
         </Grid>
         <Grid Grid.Row="4">
@@ -64,12 +64,12 @@
                 <TextBox Grid.Column="1"/>
             </Grid>
             <TextBlock Grid.Row="1" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center">* - обязательно</TextBlock>
-            <Button Grid.Row="2" Grid.Column="1">Сохранить изменения</Button>
-            <Button Grid.Row="3" Grid.Column="1" Click="DemoButton_Click">Удалить выбранную область хранения</Button>
+            <Button Name="SaveSAChangesButton" Tag="3" Grid.Row="2" Grid.Column="1" Click="Button_Click">Сохранить изменения области хранения</Button>
+            <Button Name="DeleteSAButton" Tag="4" Grid.Row="3" Grid.Column="1" Click="Button_Click">Удалить выбранную область хранения</Button>
         </Grid>
         <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="15" Height="25">Редактировать или удалить места хранения:</TextBlock>
         <TextBlock Grid.Row="1" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="14" Height="22">Элементы мебели:</TextBlock>
-        <TextBlock Grid.Row="3" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="14" Height="22">Области хранения в элементах мебели:</TextBlock>
-        <Button Grid.Row="5" VerticalAlignment="Center" HorizontalAlignment="Center" Width="140" Height="30">Назад</Button>
+        <TextBlock Grid.Row="3" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="14" Height="22">Области хранения выбранного элемента мебели:</TextBlock>
+        <Button Name="BackButton" Tag="5" Grid.Row="5" VerticalAlignment="Center" HorizontalAlignment="Center" Width="140" Height="30" Margin="253,5,250.2,5" Click="Button_Click">Назад</Button>
     </Grid>
 </Window>

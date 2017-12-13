@@ -38,8 +38,8 @@
             <TextBox Grid.Row="2" Grid.Column="1"/>
             <TextBox Grid.Row="3" Grid.Column="1"/>
             <TextBlock Grid.Row="4" Grid.ColumnSpan="2" HorizontalAlignment="Center" VerticalAlignment="Center">* - обязательно</TextBlock>
-            <Button Grid.Row="5" Grid.ColumnSpan="2">Сохранить изменения</Button>
-            <Button Grid.Row="6" Grid.ColumnSpan="2">Удалить выбранного автора</Button>
+            <Button Name="SaveChagesButton" Tag="0" Grid.Row="5" Grid.ColumnSpan="2" Click="Button_Click">Сохранить изменения</Button>
+            <Button Name="DeleteButton" Tag="1" Grid.Row="6" Grid.ColumnSpan="2" Click="Button_Click">Удалить выбранного автора</Button>
         </Grid>
         <Grid Grid.Row="1">
             <Grid.RowDefinitions>
@@ -57,9 +57,9 @@
             <TextBlock Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Center">В порядке</TextBlock>
             <ComboBox Grid.Row="1" Grid.Column="1"/>
             <ComboBox Grid.Row="2" Grid.Column="1"/>
-            <Button Grid.Row="3" Grid.ColumnSpan="2" VerticalAlignment="Center" HorizontalAlignment="Center" Width="80" Height="25">Сортировать</Button>
+            <Button Name="SortButton" Tag="2" Grid.Row="3" Grid.ColumnSpan="2" VerticalAlignment="Center" HorizontalAlignment="Center" Width="80" Height="25" Margin="80,2.4,86.4,3" Click="Button_Click">Сортировать</Button>
         </Grid>
         <TextBlock Grid.ColumnSpan="2" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="15" Height="25">Редактировать или удалить авторов:</TextBlock>
-        <Button Grid.Row="2" Grid.ColumnSpan="2" VerticalAlignment="Center" HorizontalAlignment="Center" Width="140" Height="30">Назад</Button>
+        <Button Name="BackButton" Tag="3" Grid.Row="2" Grid.ColumnSpan="2" VerticalAlignment="Center" HorizontalAlignment="Center" Width="140" Height="30" Margin="178,4.6,175.6,5.4" Click="Button_Click">Назад</Button>
     </Grid>
 </Window>

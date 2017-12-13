@@ -19,16 +19,43 @@ namespace GUI.EditDeleteWindows
     /// </summary>
     public partial class EditDeleteStoragesWindow : Window
     {
-        EditDeleteStoragesExceptionWindow TheEditDeleteStoragesExceptionWindow;
+        EditDeleteStoragesExceptionWindow ExceptionWindow;
         public EditDeleteStoragesWindow()
         {
             InitializeComponent();
         }
 
-        private void DemoButton_Click(object sender, RoutedEventArgs e)
+        private void Button_Click(object sender, RoutedEventArgs e)
         {
-            TheEditDeleteStoragesExceptionWindow = new EditDeleteStoragesExceptionWindow();
-            TheEditDeleteStoragesExceptionWindow.Show();
+            var button = sender as Button;
+            var tag = button.Tag as string;
+            var tagInt = Convert.ToInt32(tag);
+            switch (tagInt)
+            {
+                case 0:
+                    //Нажата кнопка "Сохранить изменения элемента мебели"
+                    break;
+                case 1:
+                    //Нажата кнопка "Показать связанные с эл-том мебели области хранения"
+                    break;
+                case 2:
+                    //Нажата кнопка "Удалить выбранный элемент мебели"
+                    ExceptionWindow = new EditDeleteStoragesExceptionWindow();
+                    ExceptionWindow.Show();
+                    break;
+                case 3:
+                    //Нажата кнопка "Сохранить изменения области хранения"
+                    break;
+                case 4:
+                    //Нажата кнопка "Удалить выбранную область хранения"
+                    ExceptionWindow = new EditDeleteStoragesExceptionWindow();
+                    ExceptionWindow.Show();
+                    break;
+                case 5:
+                    //Нажата кнопка "Назад"
+                    Close();
+                    break;
+            }
         }
     }
 }

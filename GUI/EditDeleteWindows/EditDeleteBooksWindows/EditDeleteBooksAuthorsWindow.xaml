@@ -5,16 +5,16 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:GUI.EditDeleteWindows"
         mc:Ignorable="d"
-        Title="Окно: Редактировать или удалить авторов выбранной книги" MinHeight="700" Height="700" MinWidth="700" Width="700">
+        Title="Окно: Редактировать или удалить авторов выбранной книги" MinHeight="800" Height="800" MinWidth="700" Width="700">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="30"/>
-            <RowDefinition/>
-            <RowDefinition/>
+            <RowDefinition Height="4*"/>
+            <RowDefinition Height="5*"/>
             <RowDefinition Height="40"/>
         </Grid.RowDefinitions>
         <TextBlock Grid.ColumnSpan="2" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="15" Height="25">Редактировать или удалить авторов выбранной книги:</TextBlock>
-        <Button Name="BackButton" Grid.Row="3" Grid.ColumnSpan="2" VerticalAlignment="Center" HorizontalAlignment="Center" Width="140" Height="30">Назад</Button>
+        <Button Name="BackButton" Tag="5" Grid.Row="3" Grid.ColumnSpan="2" VerticalAlignment="Center" HorizontalAlignment="Center" Width="140" Height="30" Click="Button_Click">Назад</Button>
         <Grid Grid.Row="1">
             <Grid.RowDefinitions>
                 <RowDefinition Height="20"/>
@@ -51,9 +51,9 @@
                     <RowDefinition/>
                     <RowDefinition/>
                 </Grid.RowDefinitions>
-                <Button>Сохранить изменения в свойствах выбранного автора</Button>
+                <Button Name="SaveChangesButton" Tag="0" Click="Button_Click">Сохранить изменения в свойствах выбранного автора</Button>
                 <TextBlock Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="10">Note: внесенные изменения коснутся автора как отдельной сущности.</TextBlock>
-                <Button Grid.Row="2">Удалить связь с выбранным автором</Button>
+                <Button Name="DeleteConnectionButton" Tag="1" Grid.Row="2"  Click="Button_Click">Удалить связь с выбранным автором</Button>
             </Grid>
             <TextBlock Grid.ColumnSpan="2" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="13" FontWeight="Bold">Авторы книги в настоящий момент:</TextBlock>
             <DataGrid Grid.Row="1" Grid.ColumnSpan="2"></DataGrid>
@@ -70,10 +70,27 @@
             </Grid.RowDefinitions>
             <TextBlock Grid.ColumnSpan="2" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="13" FontWeight="Bold">Добавить автора книги:</TextBlock>
             <TextBlock Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center">Выбрать автора среди существующих:</TextBlock>
-            <DataGrid Grid.Row="2"></DataGrid>
-            <Button Grid.Row="3" VerticalAlignment="Center" HorizontalAlignment="Center" Width="140" Height="30">Выбрать</Button>
+            <Grid Grid.Row="2">
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="35"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <DataGrid Grid.ColumnSpan="2"/>
+                <TextBlock Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center">Сортировать по</TextBlock>
+                <TextBlock Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Center">В порядке</TextBlock>
+                <ComboBox Grid.Row="1" Grid.Column="1"/>
+                <ComboBox Grid.Row="2" Grid.Column="1"/>
+                <Button Name="SortButton" Tag="2" Click="Button_Click"  Grid.Row="3" Grid.ColumnSpan="2" VerticalAlignment="Center" HorizontalAlignment="Center" Width="80" Height="25">Сортировать</Button>
+            </Grid>
+            <Button Name="AddConnectionButton" Tag="3" Grid.Row="3" VerticalAlignment="Center" HorizontalAlignment="Center" Width="240" Height="30" Click="Button_Click">Добавить связь свыбранным автором</Button>
             <TextBlock Grid.Row="4" HorizontalAlignment="Center" VerticalAlignment="Center">Если автор отсутствует в базе данных, добавьте его:</TextBlock>
-            <Button Grid.Row="5" VerticalAlignment="Center" HorizontalAlignment="Center" Width="140" Height="30">Добавить автора</Button>
+            <Button Name="AddAuthorToDBButton" Tag="4" Grid.Row="5" VerticalAlignment="Center" HorizontalAlignment="Center" Width="200" Height="30" Click="Button_Click">Добавить автора в базу данных</Button>
         </Grid>
     </Grid>
 </Window>
