@@ -21,6 +21,7 @@ namespace GUI
     /// </summary>
     public partial class MainWindow : Window
     {
+        public IContext DB { get; set; }
         public FunctionWindow ReadWindow { get; set; }
         public FunctionWindow CreateWindow { get; set; }
         public FunctionWindow EditDeleteWindow { get; set; }
@@ -28,6 +29,7 @@ namespace GUI
         public MainWindow()
         {
             InitializeComponent();
+            DB = new SimplifiedContext();
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
@@ -38,15 +40,15 @@ namespace GUI
             switch (tagInt)
             {
                 case 0:
-                    ReadWindow = new FunctionWindow(tagInt, "Просмотреть данные:");
+                    ReadWindow = new FunctionWindow(tagInt, "Просмотреть данные:", DB);
                     ReadWindow.Show();
                     break;
                 case 1:
-                    CreateWindow = new FunctionWindow(tagInt, "Добавить новые данные:");
+                    CreateWindow = new FunctionWindow(tagInt, "Добавить новые данные:", DB);
                     CreateWindow.Show();
                     break;
                 case 2:
-                    EditDeleteWindow = new FunctionWindow(tagInt, "Редактировать или удалить данные:");
+                    EditDeleteWindow = new FunctionWindow(tagInt, "Редактировать или удалить данные:", DB);
                     EditDeleteWindow.Show();
                     break;
                 case 3:

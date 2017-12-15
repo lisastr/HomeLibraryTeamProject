@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Logic
 {
-    public class SimplifiedContext
+    public class SimplifiedContext : IContext
     {
         public List<Author> Authors { get; set; }
         public List<Book> Books { get; set; }
@@ -16,7 +16,11 @@ namespace Logic
 
         public SimplifiedContext()
         {
-
+            Authors = new List<Author>();
+            //TestData
+            Authors.Add(new Author() { AuthorID = 0, Name = "A", Surname = "AA", Patronymic = "AAA" });
+            Authors.Add(new Author() { AuthorID = 1, Name = "B", Surname = "BB", Patronymic = "BBB" });
+            Authors.Add(new Author() { AuthorID = 2, Name = "C", Surname = "CC", Patronymic = "CCC" });
         }
     }
 }

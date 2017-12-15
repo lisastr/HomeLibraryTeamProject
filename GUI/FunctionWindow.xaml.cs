@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using GUI.EditDeleteWindows;
+using Logic;
 
 namespace GUI
 {
@@ -23,14 +24,16 @@ namespace GUI
         public Window BooksWindow { get; set; }
         public Window AuthorsWindow { get; set; }
         public Window StoragesWindow { get; set; }
+        public IContext DB { get; set; }
 
         public int FunctionIndicator { get; set; }
 
-        public FunctionWindow(int tag, string title)
+        public FunctionWindow(int tag, string title, IContext context)
         {
             InitializeComponent();
             FunctionIndicator = tag;
             TitleTextBlock.Text = title;
+            DB = context;
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
@@ -75,7 +78,7 @@ namespace GUI
                             //AuthorsWindow = new ...
                             break;
                         case 2:
-                            AuthorsWindow = new EditDeleteAuthorsWindow();
+                            AuthorsWindow = new EditDeleteAuthorsWindow(DB);
                             AuthorsWindow.Show();
                             break;
                     }

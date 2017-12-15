@@ -34,14 +34,25 @@
             <TextBlock Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center">Имя*:</TextBlock>
             <TextBlock Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Center">Фамилия*:</TextBlock>
             <TextBlock Grid.Row="3" HorizontalAlignment="Center" VerticalAlignment="Center">Отчество:</TextBlock>
-            <TextBox Name="NameTextBox" Grid.Row="1" Grid.Column="1"/>
-            <TextBox Name="SurnameTextBox" Grid.Row="2" Grid.Column="1"/>
-            <TextBox Name="PatronymicTextBox" Grid.Row="3" Grid.Column="1"/>
+            <TextBox Name="NameTextBox" Grid.Row="1" Grid.Column="1"  HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+            <TextBox Name="SurnameTextBox" Grid.Row="2" Grid.Column="1" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+            <TextBox Name="PatronymicTextBox" Grid.Row="3" Grid.Column="1" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
             <TextBlock Grid.Row="4" Grid.ColumnSpan="2" HorizontalAlignment="Center" VerticalAlignment="Center">* - обязательно</TextBlock>
             <Button Name="SaveChagesButton" Tag="0" Grid.Row="5" Grid.ColumnSpan="2" Click="Button_Click">Сохранить изменения</Button>
             <Button Name="DeleteButton" Tag="1" Grid.Row="6" Grid.ColumnSpan="2" Click="Button_Click">Удалить выбранного автора</Button>
         </Grid>
-        <DataGrid Name="AuthorsDataGrid" AutoGenerateColumns="True" Grid.Row="1"/>
+        <DataGrid 
+            Name="AuthorsDataGrid" 
+            AutoGeneratingColumn="AuthorsDataGrid_AutoGeneratingColumn" 
+            SelectionChanged="AuthorsDataGrid_SelectionChanged"
+            SelectionMode="Single" 
+            SelectionUnit="FullRow" 
+            SelectedIndex="0"
+            CanUserAddRows="False" 
+            CanUserDeleteRows="False" 
+            AutoGenerateColumns="True" 
+            Grid.Row="1"
+            />
         <TextBlock Grid.ColumnSpan="2" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="15" Height="25">Редактировать или удалить авторов:</TextBlock>
         <Button Name="BackButton" Tag="2" Grid.Row="2" Grid.ColumnSpan="2" VerticalAlignment="Center" HorizontalAlignment="Center" Width="140" Height="30" Margin="178,4.6,175.6,5.4" Click="Button_Click">Назад</Button>
     </Grid>
